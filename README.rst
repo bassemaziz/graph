@@ -37,3 +37,18 @@ Running tests with py.test
 ::
 
   $ pytest
+  
+How it works
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    [POST] Connect node
+        https://shortest-path-test.herokuapp.com/connect-node
+        
+    [GET] Get shortest path
+        https://shortest-path-test.herokuapp.com/path?from_node=A&to_node=D
+    
+    [GET] Test same start and target
+        https://shortest-path-test.herokuapp.com/path?from_node=A&to_node=A
+        
+    [GET] Test path doesn't exist
+        https://shortest-path-test.herokuapp.com/path?from_node=A&to_node=Z
